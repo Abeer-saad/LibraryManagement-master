@@ -1,0 +1,33 @@
+@model LibraryManagement.Application.DTOs.BorrowingDTO
+
+@{
+
+    ViewData["Title"] = "Borrowing Details";
+
+}
+
+<h1>Borrowing Details</h1>
+
+<dl class="row">
+
+    <dt class="col-sm-3">Customer</dt>
+
+    <dd class="col-sm-9">@Model.CustomerName</dd>
+
+    <dt class="col-sm-3">Book</dt>
+
+    <dd class="col-sm-9">@Model.BookTitle</dd>
+
+    <dt class="col-sm-3">Borrow Date</dt>
+
+    <dd class="col-sm-9">@Model.BorrowDate.ToShortDateString()</dd>
+
+    <dt class="col-sm-3">Return Date</dt>
+
+    <dd class="col-sm-9">@Model.ReturnDate.ToShortDateString()</dd>
+
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+
+<a asp-action="Index">Back to List</a>

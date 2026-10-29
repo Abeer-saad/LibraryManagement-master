@@ -1,0 +1,34 @@
+@model LibraryManagement.Application.DTOs.CategoryDTO
+
+@{
+
+    ViewData["Title"] = "Edit";
+
+}
+
+<h1>Edit Category</h1>
+
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="Id" />
+
+    <div asp-validation-summary="ModelOnly"
+         class="text-danger"></div>
+
+    <div class="mb-3">
+
+        <label asp-for="Name" class="form-label"></label>
+
+        <input asp-for="Name" class="form-control" />
+
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+
+</form>
+
+<a asp-action="Index">Back to List</a>

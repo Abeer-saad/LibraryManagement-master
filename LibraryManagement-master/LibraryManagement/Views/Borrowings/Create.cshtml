@@ -1,0 +1,58 @@
+@model LibraryManagement.Application.DTOs.BorrowingDTO
+
+@{
+
+    ViewData["Title"] = "Create Borrowing";
+
+}
+
+<h1>Create Borrowing</h1>
+
+<form asp-action="Create" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="ModelOnly"
+         class="text-danger"></div>
+
+    <div class="mb-3">
+
+        <label asp-for="CustomerId"></label>
+
+        <input asp-for="CustomerId" class="form-control" />
+
+        <span asp-validation-for="CustomerId" class="text-danger"></span>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="BookId"></label>
+
+        <input asp-for="BookId" class="form-control" />
+
+        <span asp-validation-for="BookId" class="text-danger"></span>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="BorrowDate"></label>
+
+        <input asp-for="BorrowDate" type="date" class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="ReturnDate"></label>
+
+        <input asp-for="ReturnDate" type="date" class="form-control" />
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+
+    <a asp-action="Index">Back to List</a>
+
+</form>

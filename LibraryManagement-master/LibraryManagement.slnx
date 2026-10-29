@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="LibraryManagement.API/LibraryManagement.API.csproj" Id="22e1a6e7-6929-40c1-8e64-fb007c1d6955" />
+  <Project Path="LibraryManagement.Application/LibraryManagement.Application.csproj" Id="2dd1aa3f-0664-4a79-8d63-bd660f000fd1" />
+  <Project Path="LibraryManagement.Domain/LibraryManagement.Domain.csproj" Id="8ba42aca-a74d-48b7-b543-202c9a9479f5" />
+  <Project Path="LibraryManagement.Infrastructure/LibraryManagement.Infrastructure.csproj" Id="040c4cb7-2c74-4e5c-936b-ee3c28d6673c" />
+  <Project Path="LibraryManagement/LibraryManagement.csproj" />
+</Solution>

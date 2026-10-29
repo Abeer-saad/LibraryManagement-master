@@ -1,0 +1,43 @@
+@model LibraryManagement.Application.DTOs.BorrowingDTO
+
+@{
+
+    ViewData["Title"] = "Delete Borrowing";
+
+}
+
+<h1>Delete Borrowing</h1>
+
+<h3>Are you sure you want to delete this borrowing?</h3>
+
+<dl class="row">
+
+    <dt class="col-sm-3">Customer</dt>
+
+    <dd class="col-sm-9">@Model.CustomerName</dd>
+
+    <dt class="col-sm-3">Book</dt>
+
+    <dd class="col-sm-9">@Model.BookTitle</dd>
+
+    <dt class="col-sm-3">Borrow Date</dt>
+
+    <dd class="col-sm-9">@Model.BorrowDate.ToShortDateString()</dd>
+
+    <dt class="col-sm-3">Return Date</dt>
+
+    <dd class="col-sm-9">@Model.ReturnDate.ToShortDateString()</dd>
+
+</dl>
+
+<form asp-action="Delete" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+
+    <a asp-action="Index">Back to List</a>
+
+</form>
