@@ -5,11 +5,12 @@ namespace LibraryManagement.Models
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ApplicationDbContext(
+            DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
         }
+
         public DbSet<Book> Books { get; set; }
 
         public DbSet<Category> Categories { get; set; }
@@ -17,5 +18,7 @@ namespace LibraryManagement.Models
         public DbSet<Customer> Customers { get; set; }
 
         public DbSet<Borrowing> Borrowings { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }
